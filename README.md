@@ -19,3 +19,8 @@ cd darknet
 # change the value of GPU=1 of Makefile then,,,
 make
 ```
+- Download yolov3 data file
+```sh
+cd cfg
+wget https://pjreddie.com/media/files/yolov3.weights
+```
