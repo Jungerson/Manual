@@ -3,6 +3,7 @@
 ## 0. Prerequisites
 - Installation of Pylon SDK 5.1.0
 - Installation of CUDA Version 10.0 (Due to the tensorflow compatibility)
+  - https://developer.nvidia.com/cuda-10.0-download-archive?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1804&target_type=deblocal
 ```sh
 sudo dpkg -i cuda-repo-ubuntu1804-10-0-local-10.0.130-410.48_1.0-1_amd64.deb
 sudo apt-key add /var/cuda-repo-<version>/7fa2af80.pub
