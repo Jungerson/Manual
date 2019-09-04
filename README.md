@@ -47,7 +47,7 @@ wget http://pjreddie.com/media/files/darknet53.conv.74
     cp yolov3.cfg model1.cfg
     ```
   - Modfify `model1.cfg` file as following instruction (https://github.com/AlexeyAB/darknet#how-to-train-to-detect-your-custom-objects)
-    - A sample file has been uploaded to this repo
+    - A sample file has been uploaded to this repo (https://github.com/NeuronAware/Manual/blob/master/model1.cfg)
 ```sh
 darknet$ ./darknet detector train ../model1.data cfg/model1.cfg data/darknet53.conv.74
 ```
