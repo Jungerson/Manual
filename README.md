@@ -26,8 +26,28 @@ cd darknet
 # change the value of GPU=1 of Makefile then,,,
 make
 ```
-- Download yolov3 data file
+- Download pre-trained weights for convolutional layers
 ```sh
 cd cfg
-wget https://pjreddie.com/media/files/yolov3.weights
+wget http://pjreddie.com/media/files/darknet53.conv.74
+```
+
+## 2. YOLO/Darknet Training for Object Detection
+- Annotate objects using `LabelImg` (https://github.com/tzutalin/labelImg)
+  - Once you finish annotating, it generates <filename>.txt files for each image files.
+  - `classes.txt` file contains the object names and each <line number - 1> will be the object ids.
+- Generate training / test dataset for darknet training using `generate_filenames.py`
+    ```sh
+    $ python3 generate_filenames.py
+    ```
+  - It generates `train.txt` and `test.txt` files that contain image file names for darknet training
+- Place generated `train.txt` and `test.txt` files under one step upper directory of `darknet`
+- Copy & modify darknet configuration file from `~darknet/cfg/yolov3.cfg`
+    ```sh
+    cp yolov3.cfg model1.cfg
+    ```
+  - Modfify `model1.cfg` file as following instruction (https://github.com/AlexeyAB/darknet#how-to-train-to-detect-your-custom-objects)
+    - A sample file has been uploaded to this repo
+```sh
+darknet$ ./darknet detector train ../model1.data cfg/model1.cfg data/darknet53.conv.74
 ```
