@@ -36,7 +36,7 @@ wget http://pjreddie.com/media/files/darknet53.conv.74
 - Annotate objects using `LabelImg` (https://github.com/tzutalin/labelImg)
   - Once you finish annotating, it generates <filename>.txt files for each image files.
   - `classes.txt` file contains the object names and each <line number - 1> will be the object ids.
-- Generate training / test dataset for darknet training using `generate_filenames.py`
+- Generate training / test dataset for darknet training using `generate_filenames.py` (https://github.com/NeuronAware/Manual/blob/master/generate_filenames.py)
     ```sh
     $ python3 generate_filenames.py
     ```
