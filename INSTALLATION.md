@@ -73,7 +73,12 @@ Install git: `sudo apt-get install git`
 Clone the git repo: `git clone https://github.com/NeuronAware/VisionAware.git`  
 Open in Qt Creator, turn off "shadow build" in build options, and run.  
 
-## 8. Make sure `PATH` and `LD_LIBRARY_PATH` environment variables are correctly set
+## 8. CuDNN installation
+```sh
+sudo dpkg -i <downloaded cudnn file.deb>
+```
+
+## 9. Make sure `PATH` and `LD_LIBRARY_PATH` environment variables are correctly set
 ```sh
 export PATH=.:/usr/local/cuda/bin:/usr/local/cuda/NsightCompute-1.0${PATH:+:${PATH}}
 export LD_LIBRARY_PATH=.:/usr/local/lib:/opt/pylon5/lib64:/usr/local/cuda/lib64:/usr/local/cuda/lib64/stubs${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
