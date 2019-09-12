@@ -20,7 +20,7 @@ Disable Nouveau drivers by creating a file `/etc/modprobe.d/blacklist-nouveau.co
 
 I didn't need to do this, but CUDA also asks to regenerate kernel initfamfs: `sudo update-initramfs -u`  
 
-[Download CUDA](http://old-releases.ubuntu.com/releases/18.04.1/).  
+[Download CUDA](https://developer.nvidia.com/cuda-10.0-download-archive).  
 Download the runfile associated with Ubuntu 18.04.  
 Run the installation file: `sudo sh cuda-10.0.130_410.48_linux.run`  
 
@@ -72,3 +72,9 @@ Install glog with: `sudo apt install libgoogle-glog-dev`
 Install git: `sudo apt-get install git`  
 Clone the git repo: `git clone https://github.com/NeuronAware/VisionAware.git`  
 Open in Qt Creator, turn off "shadow build" in build options, and run.  
+
+## 8. Make sure `PATH` and `LD_LIBRARY_PATH` environment variables are correctly set
+```sh
+export PATH=.:/usr/local/cuda/bin:/usr/local/cuda/NsightCompute-1.0${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=.:/usr/local/lib:/opt/pylon5/lib64:/usr/local/cuda/lib64:/usr/local/cuda/lib64/stubs${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+```
