@@ -13,3 +13,5 @@
 - Start annotating 
 
 ## 2. Meta Model Info Manipulation
+- Make an excel sheet for subpart information - https://docs.google.com/spreadsheets/d/1-zj_If2AKV3c7wlbcEBxU5eSV4RvYh0A364nZ1_Ko20/edit?usp=sharing
+
