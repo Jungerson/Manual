@@ -31,7 +31,7 @@
     - A sample file has been uploaded to this repo (https://github.com/NeuronAware/Manual/blob/master/model1.cfg)
 - Start training 
   ```sh
-  darknet$ ./darknet detector train ../model1.data cfg/model1.cfg data/darknet53.conv.74 -dont_show -mjpeg_port 8090 -map
+  darknet$ ./darknet detector train training_100/LX2.data training_100/LX2.cfg darknet53.conv.74 -dont_show -mjpeg_port 8090 -map
   ```
   - It takes 70 minutes for each 1000 epochs(batches)
   - Once the training done, it generates `backup/model1_final.weights` file. It should be moved under `~VisionAware/data`
