@@ -40,7 +40,7 @@ Add the following to `~/.profile`:
 
 Restart the computer.  
 
-## 3. QT installation
+## 3.1 QT installation (Qt Creator)
 
 Install some prerequisites: `sudo apt-get install mesa-common-dev`, `sudo apt-get install libglu1-mesa-dev`  
 Navigate through the Qt website and download "Qt Open Source".  
@@ -48,6 +48,11 @@ Give execution permissions to the runfile: `chmod +x`
 Run the installer.  
 When installing components, choose "Archive" and refresh. Then pick Qt 5.12.0.  
 Install the components.
+
+## 3.2 QT installation (command line)
+
+Install some prerequisites: `sudo apt-get install mesa-common-dev`, `sudo apt-get install libglu1-mesa-dev`  
+Install the QT libraries: `sudo apt-get install qt5-default qt5-qmake qtdeclarative5-dev`  
 
 ## 4. Pylon installation
 
@@ -71,7 +76,8 @@ Install glog with: `sudo apt install libgoogle-glog-dev`
 
 Install git: `sudo apt-get install git`  
 Clone the git repo: `git clone https://github.com/NeuronAware/VisionAware.git`  
-Open in Qt Creator, turn off "shadow build" in build options, and run.  
+Open in Qt Creator (if installed), turn off "shadow build" in build options, and run.  
+If Qt Creator was not installed, build with `qmake VisionAware.pro` and `make`, and run the executable.  
 
 ## 8. CuDNN installation
 ```sh
